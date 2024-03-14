@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Güneş Enerjisi Araştırması</title> <link rel="icon" type="image/x-icon" href="firat.png">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Yazı tipi boyutunu ayarlayabilirsiniz, örneğin 18px */
+    line-height: 1.6; /* Satır yüksekliği, yazılar arası boşluk için */
+    padding: 0;
+    margin: 0;
+    background: #ffffff; /* Tam beyaz arka plan */
+}
+  .sidebar {
+    height: 100%;
+    width: 250px; /* Sidebar genişliği */
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: -250px; /* Sidebar başlangıçta gizli */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidebar a {
+    padding: 4px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #818181;
+    cursor: pointer;
+  }
+  .sidebar .closebtn:hover {
+    color: #f1f1f1;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed; /* Sabit pozisyon */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5; /* Buton şeffaf */
+    border-radius: 50%; /* Butonu tam yuvarlak yapar */
+    padding: 10px 15px; /* Butonun iç boşluğu */
+    margin-left: 10px; /* Soldan boşluk ekler */
+    margin-top: 10px; /* yukardan boşluk ekler */
+    
+  }
+  .openbtn:hover {
+    opacity: 1; /* Butonun üzerine gelindiğinde şeffaflığı kaldır */
+  }
+  .main-content {
+    transition: margin-left .5s; /* Geçiş animasyonu */
+    padding: 16px; /* Üst, alt, sağ ve sol için 16px boşluk */
+    margin-left:150px; /* Sidebar genişliği kadar marjin */
+    margin-right: 150px; /* Sağ tarafta sabit boşluk */
+}
+  .research-link {
+    text-decoration: none; /* Altı çizili olmaması için */
+    color: inherit; /* Çevresindeki metinle aynı renk */
+    transition: color 0.3s; /* Renk değişim geçişi yumuşatma */
+    color: #778899;
+
+  }
+
+  .research-link:hover {
+    color: #0056b3; /* Üzerine gelince mavi olacak */
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid;
+    text-align: left;
+    padding: 8px;
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+  <a href="#section0">Güneş Enerjisi Araştırması</a>
+  <a href="#section1">Renewables Ninja</a>
+  <a href="#section2">Global Solar Atlas</a>
+  <a href="#section3">Google Maps Solar API</a>
+  <a href="#section4">NSRDB</a>
+  <a href="#section5">SolarCity Simulator</a>
+  <a href="#section6">Karşılaştırma</a>
+  <a href="#section7">Global Energy Monitor</a>
+  <a href="#section8">Kaynaklar</a>
+</div>
+
+<div id="mainContent" class="main-content">
+  <button class="openbtn" onclick="toggleSidebar()">☀</button> 
+  <br>
+  <div  class="section" id="section0">
+  <h2>Güneş Enerjisi Araştırması</h2>
+  <p>Bu rapor, yenilebilir enerji kaynakları ve solar enerji hakkında çalışan sistemler üzerine bilgi sahibi olmak amacıyla oluşturulmuştur.</p>
+  </div>
+
+  <div class="section" id="section1">
+    <h2>Renewables Ninja</h2>
+    <hr>
+    <h4>Hakkında</h4>
+    <p><a class="research-link" href="https://renewables.ninja/" target="_blank">Renewables.ninja</a>
+      , dünya çapında herhangi bir yerde bulunan rüzgar ve güneş enerjisi santrallerinin saatlik güç çıkışını simüle etmenize
+      olanak tanır. Bu araç, bilimsel kalitede hava ve enerji verilerini daha geniş bir topluluğa sunmaya yardımcı olmak için
+      inşa edilmiştir.</p>
+    <h4>Takım</h4>
+    <p>Renewables.ninja, yenilenebilir teknolojilerin enerji sistemlerimize entegrasyonunun etkilerini araştıran
+      <a class="research-link" href="https://www.pfenninger.org/" target="_blank">Stefan Pfenninger</a>
+      ve <a class="research-link" href="https://www.imperial.ac.uk/people/i.staffell" target="_blank">Iain Staffell</a>
+      arasında bir iş birliği ile geliştirilmiştir.
+      Stefan, proje lideridir, güneş enerjisi modelini tasarlar ve web uygulamasının ana planını yapar. Ayrıca,
+      <a class="research-link" href="https://www.tudelft.nl/en/" target="_blank">TU Delft </a>'te doçenttir.
+      Iain, rüzgar enerjisi modelini tasarlamıştır ve web uygulamasının geliştirilmesine katkı sağlar.
+      Imperial College London'da sürdürülebilir enerji üzerine ders vermektedir.
+    </p>
+    <h4>Lisans ve Veri Kullanım İzinleri</h4>
+    <p>Renewables.ninja aracılığıyla erişilebilen veriler, Creative Commons Atıf-NonCommercial 4.0 Uluslararası
+      <a class="research-link" href="https://creativecommons.org/licenses/by-nc/4.0/deed.tr" target="_blank">(CC BY-NC 4.0)</a>
+      lisansı altında lisanslanmıştır, bu da verileri -şart koşulan uygun krediyi sağladığınız sürece- ticari olmayan amaçlar
+      için kopyalayabileceğiniz, yeniden dağıtabileceğiniz
+      ve uyarlayabileceğiniz anlamına gelmektedir. Verilerin olduğu gibi ve garanti
+      olmaksızın sağlandığını unutmayınız. </p>
+    <h4>Veri Kaynakları</h4>
+    <p>Ninja, küresel yeniden analiz modellerinden ve uydu gözlemlerinden hava verilerini alarak çalışır. İki veri kaynakları şunlardır:</p>
+    <ul>
+      <li>NASA MERRA yeniden analizi [3] <a class="research-link" href="https://gmao.gsfc.nasa.gov/reanalysis/MERRA/" target="_blank">MERRA</a></li>
+      <li>CM-SAF'ın SARAH veri seti [4,5] (2015 EUMETSAT Telif Hakkı)
+        <a class="research-link" href="https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=SARAH_V001" target="_blank">SARRAH</a></li>
+    </ul>
+    <p>Güneş ışınımı verileri, Stefan Pfenninger tarafından yazılan GSEE modeli (Global Solar Energy Estimator) [1] kullanılarak
+      güç çıkışına dönüştürülür. Rüzgar hızları, Iain Staffell tarafından yazılan VWF modeli (Virtual Wind Farm) [2] kullanılarak
+      güç çıkışına dönüştürülür</p>
+    <h4>API</h4>
+    <p>Renewables.ninja API, kullanıcıların küresel yeniden analiz modellerinden ve uydu gözlemlerinden alınan
+      hava verilerini kullanarak rüzgar ve güneş enerjisi santrallerinin saatlik güç çıkışını simüle etmelerine
+      olanak tanır. API, anonim olarak veya kayıtlı bir kullanıcı olarak erişilebilir ve web sitesi ile aynı kullanım
+      sınırlamalarına tabidir.</p>
+    <p>Renewables.ninja API, güneş ve rüzgar enerjisi üretimi simülasyonları için kapsamlı bir araçtır
+      ve bilimsel araştırmalar, eğitim amaçlı kullanımlar ve enerji sektörü profesyonelleri tarafından değerli
+      bir kaynak olarak kullanılabilir.</p>
+    <h4>Referanslar</h4>
+    <ul>
+      <li>[1] Pfenninger, Stefan and Staffell, Iain (2016).
+        Long-term patterns of European PV output using 30 years of
+        validated hourly reanalysis and satellite data. Energy 114, pp. 1251-1265. doi:
+        <a class="research-link" href="https://dx.doi.org/10.1016/j.energy.2016.08.060" target="_blank">10.1016/j.energy.2016.08.060</a></li>
+
+      <li>[2] Staffell, Iain and Pfenninger, Stefan (2016). Using Bias-Corrected Reanalysis to Simulate
+        Current and Future Wind Power Output. Energy 114, pp. 1224-1239. doi:
+        <a class="research-link" href="https://dx.doi.org/10.1016/j.energy.2016.08.068" target="_blank">10.1016/j.energy.2016.08.068</a>
+      </li>
+      <li>
+        [3] Rienecker MM, Suarez MJ, Gelaro R, Todling R, et al. (2011). MERRA:
+        NASA’s Modern-Era Retrospective Analysis for Research and Applications. Journal of Climate, 24(14): 3624-3648. doi:
+        <a class="research-link" href="https://dx.doi.org/10.1175/JCLI-D-11-00015.1" target="_blank">10.1175/JCLI-D-11-00015.1</a>
+      </li>
+      <li>
+        [4] Müller, R., Pfeifroth, U., Träger-Chatterjee, C., Trentmann, J., Cremer, R. (2015). Digging
+        the METEOSAT Treasure—3 Decades of Solar Surface Radiation. Remote Sensing 7, 8067–8101. doi:
+        <a class="research-link" href="https://dx.doi.org/10.3390/rs70608067" target="_blank">10.3390/rs70608067</a>
+      </li>
+      <li>
+        [5] SARAH dataset. doi:
+        <a class="research-link" href="https://dx.doi.org/10.5676/EUM_SAF_CM/SARAH/V001" target="_blank">10.5676/EUM_SAF_CM/SARAH/V001</a>
+      </li>
+    </ul>
+    <h4>İletişim</h4>
+    <p>Mail yolu ile iletişim için <a class="research-link" href="mailto:contact@renewables.ninja" target="_blank">contact@renewables.ninja</a></p>
+  </div>
+
+  <div class="section" id="section2">
+    <h2>Global Solar Atlas</h2>
+    <hr>
+    <h4>Hakkında</h4>
+    <p><a class="research-link" href="https://www.worldbank.org/" target="_blank">Dünya Bankası</a>
+      ve Uluslararası Finans Kurumu <a class="research-link" href="https://www.ifc.org/" target="_blank">(IFC)</a>
+      , kısaca Dünya Bankası Grubu olarak, müşteri ülkelerinde güneş enerjisinin
+      artırılmasını desteklemek amacıyla bu <a class="research-link" href="https://globalsolaratlas.info/map" target="_blank">Global Solar Atlas</a> ’ı,
+      küresel, bölgesel ve ülke GIS veri katmanları ve poster
+      haritaları serisi ile birlikte sunmuştur. Bu çalışma, Dünya Bankası tarafından yönetilen ve 13 resmi ikili donör tarafından
+      desteklenen, Enerji Sektörü Yönetim Yardım Programı
+      <a class="research-link" href="https://www.esmap.org/foundations-for-the-energy-transition" target="_blank">(ESMAP)</a>
+      tarafından finanse edilmiştir. Bu, biyokütle, küçük hidro, güneş
+      ve rüzgarı içeren küresel bir ESMAP Yenilenebilir Enerji Kaynak Haritalama girişiminin bir parçasıdır.</p>
+
+    <p>Dünya Bankası Grubu, güneş verileri ve ilgili güneş enerjisi değerlendirme hizmetleri konusunda küresel
+      sağlayıcısı olarak Solargis'i seçmiştir. Bu Küresel Güneş Atlası, Solargis tarafından Dünya Bankası için
+      bir sözleşme kapsamında hazırlanmış olup, kendilerine ait ve bakımını yaptıkları bir güneş kaynak veri
+      tabanına dayanmaktadır. Ticari sorgular için doğrudan Solargis ile iletişime geçmek gerekmektedir.</p>
+
+    <p>Küresel Güneş Atlası, bir site veya bölgenin güneş enerjisi potansiyeli hakkında size genel bir bakış sağlayacak çevrimiçi bir araçtır.</p>
+    <p>Küresel Güneş Atlası 4 ana özellik sunar:</p>
+
+    <ol>
+      <li>
+        <h4>Etkileşimli haritalar</h4>
+        <p>Etkileşimli haritalar, bir bölgenin güneş kaynak potansiyelini görselleştirmenize
+          olanak tanır ve her harita tıklaması için yıllık ortalama değerler sağlar.</p>
+        <img src="gsol_1.gif" alt="">
+      </li>
+      <li>
+        <h4>PV enerji verimi hesaplayıcısı</h4>
+        <p>PV verim hesaplayıcısı, özel tanımlı bir PV sistemi için uzun vadeli enerji verimini hesaplamanıza olanak tanır. Enerji verimi
+          tahminleri, PV üretiminin mevsimsel ve günlük içi değişkenliğini anlamanıza olanak tanıyan 12x24 (ay x saat) profilleri olarak sağlanır.</p>
+        <img src="gsol_2.gif" alt="">
+      </li>
+      <li>
+        <h4>İndirilebilir haritalar ve CBS verileri</h4>
+        <p>Ülke bazında güneş enerjisi potansiyelinin anlık görüntüleri, politika yapıcıların ve araştırmacıların ilgi alanlarındaki
+          ülkeler ve bölgeler için güneş enerjisinin teorik ve pratik potansiyelini anlamalarına yardımcı olmak amacıyla hazırlanmıştır.</p>
+        <img src="gsol_3.gif" alt="">
+      </li>
+      <li>
+        <h4>Ülke ve bölgesel güneş enerjisi potansiyel istatistikleri</h4>
+        <p>İndirme bölümü, sunum amaçları için poster haritalarının indirilmesine olanak tanır.
+          Ek olarak, QGIS, ArcGIS gibi yazılımlar kullanarak ileri düzey coğrafi uzamsal analiz için CBS veri katmanları indirilebilir.</p>
+        <img src="gsol_4.png" alt="">
+      </li>
+    </ol>
+    <h4>Küresel Güneş Atlası'nın Sınırlılıkları</h4>
+    <p>Küresel Güneş Atlası'nın amacı, politika yapıcıları, araştırmacıları ve ticari güneş enerjisi şirketlerinin daha iyi kararlar
+      almasına yardımcı olacak güvenilir giriş seviyesi veriler sağlamaktır. Büyük güç santrallerinin proje özgü analizi için,
+      Küresel Güneş Atlası aracılığıyla sunulan veriler yalnızca ön analiz için uygundur. PV verim tahminleri, bir fotovoltaik
+      güç santralinin potansiyel verimini etkileyebilecek birçok önemli faktörü hesaba katmamaktadır. Büyük güç santralleri için,
+      enerji veriminin kesin bir tahminini elde etmek amacıyla daha ayrıntılı verim tahmin araçları ile çalışılması önerilir.</p>
+  <h4>Veri Kaynakları & Kullanılan Veriler</h4>
+    <p>
+      Küresel Güneş Atlası, hem modellemeye dayalı hem de ölçülmüş güneş ışınımı ve meteorolojik verilerin sunulduğu açık veri girişimidir.
+      <ul>
+      <li><a class="research-link" href="https://globalsolaratlas.info/support/data-sources" target="_blank">veri kaynakları için tıklayınız</a></li>
+    <li><a class="research-link" href="https://globalsolaratlas.info/support/data-outputs" target="_blank">veri tipleri için tıklayınız</a></li>
+      </ul>
+    </p>
+    <h4>Metodoloji</h4>
+    <p>
+      Atlas tarafından sağlanan konum özgü bilgiler, üç ana farklı modeli içerir:
+      <ul>
+        <li>Güneş ışınımı modeli</li>
+        <li>Hava sıcaklığı modeli</li>
+        <li>PV güç simülasyon modeli</li>
+      </ul>
+    Güneş ışınımı ve hava sıcaklığı modellemesi, haritadaki (neredeyse) herhangi bir
+    konumda alınabilecek önceden hesaplanmış veri katmanları serisini sonuçlandırır.
+    PV güç simülasyonu için olası bir PV sistemi tipi ve yapılandırması hakkında ek bilgiler
+    kullanılır, bu simülasyon Solargis iç algoritmaları ve veritabanları kullanılarak talep üzerine hesaplanır.
+    <a class="research-link" href="https://globalsolaratlas.info/support/methodology" target="_blank">detaylı metodoloji için tıklayınız</a>
+    </p>
+    <h4>İletişim</h4>
+    <p><a class="research-link" href="https://globalsolaratlas.info/pages/contact" target="_blank">iletişim için tıklayınız</a></p>
+  </div>
+  
+  <div class="section" id="section3">
+    <h2>Google Maps Solar API</h2>
+    <hr>
+    <h4>Hakkında</h4>
+   <p>
+     <a class="research-link" href="https://developers.google.com/maps/documentation/solar/overview?hl=tr" target="_blank">Google Haritalar Platformu Solar API</a>,
+     güneş ve enerji sistemi kurulumlarını hızlandırmaya yardımcı olmaya
+     odaklanan bir hizmettir. Solar API, yenilenebilir çatı güneş enerjisi potansiyelini ve tasarruflarını tahmin
+     etmeye yardımcı olmak için Google'ın geniş harita ve bilgi işlem kaynaklarına dayanan ayrıntılı çatı verileri oluşturur.</p>
+    <iframe
+            width="600px"
+            height="300px"
+            src="https://www.youtube.com/embed/V_r2EQRAA3U"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+    ></iframe>
+    <h4>Veriler</h4>
+    <p>API, üç uç noktaya yönelik istekleri kabul eder:</p>
+    <ul>
+      <li><b>buildingInsights</b>: Bu hizmet uç noktası, bir binanın konumu, boyutları ve güneş enerjisi potansiyeli hakkında analizler döndürür.</li>
+      <li><b>dataLayers</b>: Bu hizmet uç noktası, bir konumu çevreleyen alan için ham güneş enerjisi veri kümelerine ait URL'leri döndürür.</li>
+      <li><b>geoTiff</b>: Bu uç nokta; dijital yüzey modeli, havadan görüntü, yıllık ve aylık akı haritaları ve saatlik gölgeyi içeren
+        kodlanmış güneş enerjisi bilgilerine sahip kafesleri getirir.</li>
+    </ul>
+    <p>Bu veriler kullanıcılara şu konularda yardımcı olabilir:</p>
+    <ul>
+      <li>Uzaktan güneş enerjisi sistemi tasarlama</li>
+      <li>Güneş enerjisi sahasını değerlendirme süresini azaltma</li>
+      <li>Yükleme konumlarına öncelik verme</li>
+    </ul>
+    <h4>Solar API Kapsamı</h4>
+    <p>Ülke bazında en güncel kapsam ayrıntıları için
+      <a class="research-link" href="https://developers.google.com/maps/documentation/solar/coverage?hl=tr" target="_blank">Solar API'nin desteklendiği ülke ve bölgelere</a>
+       bakın.</p>
+    <h4>Solar API Demosunu Deneyin</h4>
+    <p>Solar API'nin özellikleri hakkında daha fazla bilgi edinmek için
+      <a class="research-link" href="https://solar-potential-kypkjw5jmq-uc.a.run.app/" target="_blank">Solar API demo web uygulamasına</a>
+      göz atın.
+      Ayrıca isteğe bağlı olarak, GitHub'da demoyu oluşturmak için kullanılan
+      <a class="research-link" href="https://github.com/googlemaps-samples/js-solar-potential" target="_blank">kodu yeniden kullanabilirsiniz.</a>
+      kodu yeniden kullanabilirsiniz.</p>
+    <h4>Analiz & Bilgi Sunma</h4>
+    <p>Google Maps Solar API sadece bina bilgilerini kullanarak bir sorgu yapmaya izin verir.
+      Bu sorguda Amerikada da daha kolay yapılırken, Amerika dışında kalan bölgelerde sorgu parametrelerinin girilmesi ile mümkün olur.
+      Güneş paneli boyutu, yıllık güneş ışığı miktarı ve karbon ofset faktörleri dahil güneş enerjisi potansiyeli,
+      Güneş panelinin konumu, yönü ve enerji üretimi,
+      Optimum güneş enerjisi düzeninin ve ilgili maliyetlerle avantajların tahmini aylık enerji faturası gibi konularda bilgi sağlar.
+    Bu bilgiler sayesinde binanın maliyet ve tasarrufu hesaplanabilir. Amerikada otomatik olarak yapılan bu hesaplama diğer
+    bölgelerde parametrelerin farklığı nedeniyle otomatik olarak gerçekleştirilememektedir.</p>
+  </div>
+  <h4>Faturalandırma</h4>
+  <p>Solar API, kullandıkça öde fiyatlandırma modeli kullanır. Google Haritalar Platformu API'leri ve SDK'ları,
+    SKU'ya göre faturalandırılır. Kullanım her SKU için izlenir ve herhangi bir API'nin veya SDK'nın birden fazla ürün SKU'su olabilir.
+    <a class="research-link" href="https://developers.google.com/maps/documentation/solar/usage-and-billing?hl=tr" target="_blank">Detaylı bilgi için tıklayınız.</a>
+  </p>
+
+  <div class="section" id="section4">
+    <h2>NSRDB: National Solar Radiation Database</h2>
+    <hr>
+    <h4>Hakkında</h4>
+    <p>
+      <a class="research-link" href="https://nsrdb.nrel.gov/" target="_blank">NSRDB</a>
+      (Ulusal Güneş Radyasyonu Veri Bankası), meteorolojik verilerin saatlik ve yarım saatlik değerlerinin ve güneş radyasyonunun üç
+      en yaygın ölçümünün: global yatay, doğrudan normal ve dağınık yatay ışınımın seri olarak tam bir koleksiyonudur.
+    </p>
+    <p>Veritabanı, Amerika Birleşik Devletleri'ni ve artan bir uluslararası lokasyon alt kümesini kapsar. Bu veriler, bölgesel güneş radyasyonu
+      iklimlerini doğru bir şekilde temsil etmek için yeterli sayıda lokasyonda ve zamansal ile mekansal ölçekte toplanmıştır. Veri seti tarafından
+      kapsanan belirli bir lokasyonda, belirli bir zamanda mevcut olan güneş enerjisi miktarını görmek ve geçmiş koşullara dayanarak güneş enerjisinin
+      potansiyel gelecek erişilebilirliğini tahmin etmek mümkündür.</p>
+    <p>Türkiye üzerinden veri çekmek istediğinizide, Verini kaynağı METEOSAT (2017-2019) olucaktır. Bu verileri 15, 30 ve 60 dakikalık aralıklarla
+    seçtiğiniz konumun 4 kilometrelik çevresi üzerinden sunar.</p>
+    <p>
+      <a class="research-link" href="https://nsrdb.nrel.gov/" target="_blank">daha detaylı bilgi için tıklayınız.</a>
+    </p>
+    <h4>SAM & PVWatts</h4>
+    <p>Güneş enerjisi panellerinin detaylı enerji getirilerini hesaplamak için iki ayrı teknoloji geliştirmişlerdir,
+      <a class="research-link" href="https://sam.nrel.gov/" target="_blank">System Advisor Model (SAM)</a>
+      ve
+      <a class="research-link" href="https://pvwatts.nrel.gov/" target="_blank">PVWatts</a>
+      ile bir sistemin detaylı  enerji getirilerini hesaplayabilirsiniz.</p>
+  </div>
+  <div class="section" id="section5">
+    <h2>SolarCity Simulator</h2>
+    <hr>
+    <p>
+      <a class="research-link" href="https://solarcity.irena.org/#en/locations" target="_blank">SolarCity</a>
+      , ev halklarına, işletmelere ve belediye makamlarına, çatı monteli güneş fotovoltaik (PV) sistemleri kullanarak
+      elektrik üretme olasılıklarını değerlendirmelerine yardımcı olmak için oluşturulmuş bir web tabanlı simülatör uygulamasıdır.</p>
+    <p>Evler ve işletmeler için simülatör, çatı güneş PV'sinden elde edilebilecek muhtemel tasarrufları diğer güç kaynaklarıyla karşılaştırarak
+      ve bir nakit akışı finansman modeline dayanarak hesaplamak için araçlar sağlar.</p>
+    <p>Belediye makamları için simülatör, her şehrin çatı güneş PV piyasası üzerindeki farklı politika teşviklerinin - üretim veya sermaye
+      sübvansiyonları gibi - değerlendirmelerini destekler.</p>
+    <p>SolarCity simülatörü, ultra yüksek çözünürlüklü üç boyutlu bina ayak izleri ile bir metre kare (m<sup>2</sup>) hücrelerde hesaplanan güneş ışınımı
+      verilerini birleştirir. Uluslararası Yenilenebilir Enerji Ajansı
+      <a class="research-link" href="https://www.irena.org/" target="_blank">(IRENA)</a>
+      tarafından Yenilenebilir Enerji için Küresel Atlas kapsamında
+      geliştirilen bir dizi web uygulamasından biridir.</p>
+    <p>Türkiyede sadece Gaziantep, Şahinbey ilçesinde hizmet vermektedir.</p>
+    <p>
+      <a class="research-link" href="https://www.irena.org/Energy-Transition/Project-Facilitation/Renewable-potential-assessment/SolarCity-Simulator" target="_blank">daha fazla bilgi için tıklayınız.</a>
+    </p>
+  </div>
+  <div class="section" id="section6">
+    <h2>Karşılaştırma</h2>
+    <hr>
+    <p>Aşağıdaki tablo, raporda yer alan teknolojilerin karşılaştırılmasını içermektedir.</p>
+    <table>
+      <tr>
+        <th>Sorular</th>
+        <th>Renewables.ninja</th>
+        <th>Global Solar Atlas</th>
+        <th>Google Solar API</th>
+        <th>NSRDB</th>
+        <th>Solar City Simulator</th>
+      </tr>
+      <tr>
+        <td>Verileri nasıl temin ediyor?</td>
+        <td>Nasa Merra & Sarrah</td>
+        <td>Solargis & World Bank Group</td>
+        <td>Özel Veriler</td>
+        <td>Meteostat, Himawari, Extended Americas </td>
+        <td>IRENA</td>
+      </tr>
+      <tr>
+        <td>API sağlıyor mu, ticari kullanıma açık mı?</td>
+        <td>API sağlıyor ancak ticari kullanıma kapalı</td>
+        <td>API Sağlamıyor</td>
+        <td>API sağlıyor, ücretli</td>
+        <td>PVWatts API sağlar</td>
+        <td>API sağlamıyor</td>
+      </tr>
+      <tr>
+        <td>Özgün değeri ne?</td>
+        <td>Rüzgar ve Güneş enerjisi verilerine aynı anda erişim sağlar, hava durumu verilerini
+          daha detaylı ele alır, kullanılacak teknolojiye göre enerji getirisini hesaplar.</td>
+        <td>Uydu görüntüsüne erişim sağlayıp farklı verilere göre sıcaklık haritası sunar, Detaylı grafiksel raporlar sunar.</td>
+        <td>Yapılar üzerinde yer alacak panellerin, binaya yıllık katkısını ve maliyetini hesaplar.</td>
+        <td>Verileri istediğiniz zaman aralığında istediğiniz kaynaktan indirebilmenizi sağlar. SAM & PVWatts ile panellerin detaylı analizlerini yapmaya imkan tanır.</td>
+        <td>Kullanıcının seçtiği binanın gelir gider gibi verilerini ülkeye göre ayrı olarak hesaplar.
+          Sadece belediyelere özel olarak, detaylı bir çatı üstü PV model analizi sunar.</td>
+      </tr>
+      <tr>
+        <td>Enerjiyi yeterince iyi hesaplıyor mu?</td>
+        <td>Saatlik veriler üzerinden, akademik çalışmalar ile elde edilen formülleri kullanır, kullanılan panel tipinden bağımsız olarak kapasite
+          ve sistem kaybı gibi etmenleri baz alan bir hesaplama yapar.</td>
+        <td>15 dakika ara ile alınan veriler üzerinden hesaplamalar yapar, yer tarama ve ön fizibilite için uygundur. Genel kristal
+        silikon modeller ile 3 ayrı tipde hesaplama yapabilir.</td>
+        <td>Solar API tarafından hesaplanan değerler panel verimliliğinden bağımsızdır.
+          Enerji üretimini hesaplamak için panellerin kilovatajıyla çarpıp diğer sistem kayıplarını hesaba katmanız gerekir.</td>
+        <td>SAM & PVWatts ile yıllık ortalama enerji getirisini hesaplayabilir. SAM ile çok daha detaylı analizler yapmak mümkündür.</td>
+        <td>Seçilen binaya ait detaylı bir analiz sunar, İç Karlılık Oranı (IRR) vb. metrikleri hesaplar. </td>
+      </tr>
+      <tr>
+        <td>Gelir hesabı yapabiliyor mu?</td>
+        <td>Hayır</td>
+        <td>Hayır</td>
+        <td>Kullanılan bölgeye göre farklı parametreler kullanarak gelir hesabı yapar.</td>
+        <td>SAM ile farklı sistemlerin ekonomik ve finansal uygulanabilirliği hesaplanabilirken PVWatts ile ise yıllık enerji geliri hesaplanabilir.</td>
+        <td>Yatırım Maliyetini ve Geri Ödeme süresini hesaplar.</td>
+      </tr>
+      <tr>
+        <td>Kullanımı kolay mı?</td>
+        <td>Zor</td>
+        <td>Orta</td>
+        <td>Kolay</td>
+        <td>Orta</td>
+        <td>Kolay</td>
+      </tr>
+    </table>
+  </div>
+  <div class="section" id="section7">
+    <h2>Global Energy Monitor</h2>
+    <hr>
+    <h4>Hakkında</h4>
+    <p>Global Güneş Enerjisi Gücü İzleyicisi, ölçekli güneş fotovoltaik (PV) ve güneş termal tesislerinin dünya çapındaki
+      bir veri setidir. 20 megavat (MW) veya daha fazla kapasiteye sahip güneş çiftliği aşamalarını kapsar. İzleyici ayrıca
+      1 MW ile 20 MW arasındaki aşamaların kısmi kapsamını da içerir. </p>
+    <p>Bir güneş projesi aşaması genellikle tek bir izin altında kurulan ve genellikle aynı anda çevrimiçi olan bir veya daha
+      fazla güneş ünitesinin bir grubu olarak tanımlanır. Global Güneş Enerjisi Gücü İzleyicisi, işletmede olan, duyurulan,
+      ön inşaat aşamasında olan, inşaat halinde olan, askıya alınan, iptal edilen, kullanım dışı bırakılan veya emekliye ayrılan
+      herhangi bir durumdaki bu kapasite eşiklerindeki her güneş çiftliği aşamasını kataloglar.</p>
+    <p>
+      <a class="research-link" href="https://globalenergymonitor.org/" target="_blank">daha fazla bilgi için tıklayınız.</a>
+    </p>
+  </div>
+  <div class="section" id="section8">
+    <h2>Kaynaklar</h2>
+    <hr>
+    <ul>
+      <li>
+        <a class="research-link" href="https://www.epa.gov/green-power-markets/renewable-energy-project-development-toolbox" target="_blank">EPA United States Environmental Protection Agency Toolbox</a>
+      </li>
+      <li>
+        <a class="research-link" href="https://build-up.ec.europa.eu/en/home" target="_blank">European Commision BUILD UP</a>
+      </li>
+      <li>
+        <a class="research-link" href="https://energy.ec.europa.eu/topics/renewable-energy/renewable-energy-directive-targets-and-rules/renewable-energy-directive_en" target="_blank">European Commision Renewable energy directive</a>
+      </li>
+      <li>
+        <a class="research-link" href="https://enerji.gov.tr/" target="_blank">T.C. Enerji ve Tabii Kaynaklar Bakanlığı</a>
+      </li>
+    </ul>
+    <h3>Ekstra PV Enerji Hesaplayıcılar</h3>
+    <ol>
+      <li>
+        <a class="research-link" href="https://re.jrc.ec.europa.eu/" target="_blank">PHOTOVOLTAIC GEOGRAPHICAL INFORMATION SYSTEM</a>
+      </li>
+    </ol>
+    <h3>Makaleler</h3>
+    <ol>
+      <li>
+        <a class="research-link" href="https://pubs.aip.org/aip/acp/article/2056/1/020008/702102/Regression-analysis-of-a-photovoltaic-PV-system-in" target="_blank">Regression analysis of a photovoltaic (PV) system in FPO</a>
+      </li>
+      <li>
+        <a class="research-link" href="https://www.sciencedirect.com/science/article/pii/S2214157X18304246?via%3Dihub" target="_blank">A comparison study based on artificial neural network for assessing PV/T solar energy production</a>
+      </li>
+    </ol>
+  </div>
+  <!-- İçerik bölümü -->
+  <!-- Diğer içerikler buraya gelecek -->
+</div>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("mySidebar");
+        var mainContent = document.getElementById("mainContent");
+    
+        if (sidebar.style.left === '0px') {
+            // Sidebar'ı kapat
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '150px'; // Sidebar kapalıyken sol marjin
+        } else {
+            // Sidebar'ı aç
+            sidebar.style.left = '0';
+            mainContent.style.marginLeft = '400px'; // Sidebar genişliği (250px) + ekstra boşluk (40px)
+        }
+    }
+    
+    // Sidebar içindeki tüm linklere tıklama işlevi ekleyin
+    document.querySelectorAll('.sidebar a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var sidebar = document.getElementById("mySidebar");
+            sidebar.style.left = '-250px'; // Sidebar'ı gizle
+            var mainContent = document.getElementById("mainContent");
+            mainContent.style.marginLeft = '150px'; // Sidebar linkine tıklandığında içerik için sol marjin
+        });
+    });
+    
+</script>
+
+</body>
+</html>
